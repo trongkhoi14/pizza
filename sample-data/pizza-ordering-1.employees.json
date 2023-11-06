@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6543e539c65d2485208aa669"
+  },
+  "name": "Admin",
+  "email": "admin@gmail.com",
+  "mobile": "0922222501",
+  "password": "$2b$10$OAey.m1FIp5kozMTMS4hkefPnLE/fGl7i/Gew9XrEn1sfs2WmWthC",
+  "role": "admin",
+  "isBlocked": false,
+  "createdAt": {
+    "$date": "2023-11-02T18:06:49.138Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:28:14.052Z"
+  },
+  "__v": 0,
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTQzZTUzOWM2NWQyNDg1MjA4YWE2NjkiLCJpYXQiOjE2OTg5NDk2OTQsImV4cCI6MTcwMTU0MTY5NH0.xfKdifRHDjGna8OJZFHyWx8BZ-e6N1n4TzBNVndP6vQ"
+}]

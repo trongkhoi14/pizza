@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6543e706c65d2485208aa670"
+  },
+  "name": "User1",
+  "email": "user1@gmail.com",
+  "mobile": "0922222301",
+  "password": "$2b$10$/zY5JBKpXYA/9tvQXkDveu72RbQQ5Q0T2uP4.NMHstFHGkOe1XEdK",
+  "role": "user",
+  "isBlocked": false,
+  "createdAt": {
+    "$date": "2023-11-02T18:14:30.562Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:14:30.562Z"
+  },
+  "__v": 0
+}]

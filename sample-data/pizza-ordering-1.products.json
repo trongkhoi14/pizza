@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6543e7f07a9e64ba892ec94f"
+  },
+  "title": "pizza hải sản",
+  "category": {
+    "$oid": "6543e73bc65d2485208aa672"
+  },
+  "description": "Thơm ngon",
+  "price": 89000,
+  "sizes": [
+    {
+      "size": {
+        "$oid": "6543e7b37a9e64ba892ec946"
+      },
+      "price": 89000
+    }
+  ],
+  "sold": 0,
+  "slug": "pizza-hai-san",
+  "hidden": false,
+  "salePercent": 0,
+  "createdAt": {
+    "$date": "2023-11-02T18:18:24.961Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:20:53.301Z"
+  },
+  "__v": 0,
+  "image": "api/images/6543e7f07a9e64ba892ec94f-con-cho-cui.jpg"
+}]

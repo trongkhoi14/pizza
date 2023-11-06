@@ -1,0 +1,67 @@
+version: "3.8"
+services:
+  app:
+    container_name: kin-app-container
+    build:
+      context: ./backend
+      dockerfile: docker-setup/node/production/Dockerfile
+    networks:
+      - backend
+      - frontend
+    links:
+      - db:db
+    volumes:
+      - ./backend/public/images:/app/public/images
+      - ./backend/logs:/app/logs
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ./backend/.env.production
+    tty: true
+    stdin_open: true
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - '5000:5000'
+
+  db:
+    container_name: mongo-container
+    image: mongo
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=localmongo
+      - MONGO_INITDB_ROOT_PASSWORD=Matkhauadmin
+    ports:
+      - '27017:27017'
+    networks:
+      - backend
+    volumes:
+      #- ./backend/docker-setup/mongo/db-init.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./backend/docker-setup/mongo/mongo-volume:/data/db
+    user: 1003:1003
+
+  frontend:
+    container_name: kin-frontend-container
+    networks:
+      - frontend
+    build:
+      context: ./frontend
+      dockerfile: docker-setup/react/production/Dockerfile
+    environment:
+      - NODE_ENV=production
+    tty: true
+    stdin_open: true
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    user: 1003:1003
+
+networks:
+  backend:
+    name: kin-backend-network
+  frontend:
+    name: kin-frontend-network
+
